@@ -13,4 +13,11 @@ public class SpringController {
     public String sayHello() {
         return "Hello from BridgeLabz";
     }
+
+    //UC2
+    @GetMapping("/helloworld")
+    public String sayHello(Model model) {
+        model.addAttribute("message", "Hello from BridgeLabz");
+        return "hello"; // Refers to hello.html in the templates folder
+    }
 }
